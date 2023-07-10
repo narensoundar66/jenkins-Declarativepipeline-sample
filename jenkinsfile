@@ -1,0 +1,26 @@
+pipeline {
+  agent any
+  stages {
+    stage('Preparation') {
+      steps{
+         echo 'Successfully cloned repository...'
+      }
+    }
+    stage('Build') {
+      steps{
+        sh '''
+          java --version
+          echo "changing into directory src"
+          cd src
+          pwd
+          java Main.java
+        '''
+      }
+    }
+    stage('Results') {
+      steps{
+        echo "Ending job ..."
+      }
+    }
+  }
+}
