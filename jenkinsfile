@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Preparation') {
+    stage('Preparation') 
+    {
       steps{
-         echo 'Successfully cloned repository...'
+         echo 'Successfully cloned repository...
       }
     }
     stage('Build') {
@@ -15,6 +16,12 @@ pipeline {
       steps{
         echo "Ending job ..."
       }
+    }
+  }
+  post
+  {
+    fail{
+      echo "build failed"
     }
   }
 }
