@@ -4,7 +4,7 @@ pipeline {
     stage('Preparation') 
     {
       steps{
-         echo 'Successfully cloned repository..."
+         echo "Successfully cloned repository..."
          echo "current branch BRANCH_NAME"
       }
     }
