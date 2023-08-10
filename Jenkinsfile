@@ -19,10 +19,3 @@ pipeline {
       }
     }
   }
-  post
-  {
-    fail{
-      echo "build failed"
-    }
-  }
-}
